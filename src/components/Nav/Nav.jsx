@@ -11,7 +11,6 @@ function Nav() {
       .catch((error) => console.log(error));
   };
 
-  console.log(user?.email);
   return (
     <div>
       <div className="navbar bg-base-100 max-w-7xl mx-auto">
@@ -50,6 +49,16 @@ function Nav() {
               to="/register"
             >
               Register
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-green-500 font-semibold"
+                  : "text-gray-800 font-semibold"
+              }
+              to="/order"
+            >
+              Order
             </NavLink>
           </li>
         </div>
