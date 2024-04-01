@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { authContext } from "../../AuthProvider";
+import { Link } from "react-router-dom";
 
 function Home() {
   const authInfo = useContext(authContext);
@@ -17,7 +18,9 @@ function Home() {
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
-          <button className="btn text-white bg-green-500">Get Started</button>
+          <Link to="/register" className="btn text-white bg-green-500">
+            Get Started
+          </Link>
         </div>
       </div>
     </div>
